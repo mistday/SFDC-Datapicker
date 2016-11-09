@@ -1,0 +1,193 @@
+<aura:component>
+
+  <div class="slds-form-element">
+    <div class="slds-form-element__control" style="width:200px;">
+      <div class="slds-input-has-icon slds-input-has-icon--right">
+
+        <lightning:icon iconName="utility:event" size="xx-small" alternativeText="event" class="slds-input__icon slds-icon-text-default" />
+
+        <input aura-id="date-input" class="slds-input" value="" type="text" />
+
+        <!-- datapicker -->
+        <div class="slds-datepicker slds-dropdown slds-dropdown--left" aria-hidden="false">
+          <div class="slds-datepicker__filter slds-grid">
+            <div class="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
+              <div class="slds-align-middle">
+                <button class="slds-button slds-button--icon-container" title="Previous Month">
+                  <lightning:icon iconName="utility:left" size="xx-small" alternativeText="left" class="slds-button__icon" />
+                  <span class="slds-assistive-text">Previous Month</span>
+                </button>
+              </div>
+              <h2 id="month" class="slds-align-middle" aria-live="assertive" aria-atomic="true">June</h2>
+              <div class="slds-align-middle">
+                <button class="slds-button slds-button--icon-container" title="Next Month">
+                  <lightning:icon iconName="utility:right" size="xx-small" alternativeText="right" class="slds-button__icon" />
+                  <span class="slds-assistive-text">Next Month</span>
+                </button>
+              </div>
+            </div>
+            <div class="slds-shrink-none">
+              <label class="slds-assistive-text" for="select-01">Pick a Year</label>
+              <div class="slds-select_container">
+                <select id="select-01" class="slds-select">
+                  <option>2014</option>
+                  <option>2015</option>
+                  <option>2016</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <table class="slds-datepicker__month" role="grid" aria-labelledby="month">
+            <thead>
+              <tr id="weekdays">
+                <th id="Sunday" scope="col">
+                  <abbr title="Sunday">Sun</abbr>
+                </th>
+                <th id="Monday" scope="col">
+                  <abbr title="Monday">Mon</abbr>
+                </th>
+                <th id="Tuesday" scope="col">
+                  <abbr title="Tuesday">Tue</abbr>
+                </th>
+                <th id="Wednesday" scope="col">
+                  <abbr title="Wednesday">Wed</abbr>
+                </th>
+                <th id="Thursday" scope="col">
+                  <abbr title="Thursday">Thu</abbr>
+                </th>
+                <th id="Friday" scope="col">
+                  <abbr title="Friday">Fri</abbr>
+                </th>
+                <th id="Saturday" scope="col">
+                  <abbr title="Saturday">Sat</abbr>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="week11">
+                <td class="slds-disabled-text" headers="Sunday week11" role="gridcell" aria-disabled="true" aria-selected="false">
+                  <span class="slds-day">31</span>
+                </td>
+                <td headers="Monday week11" role="gridcell" aria-selected="false">
+                  <span class="slds-day">1</span>
+                </td>
+                <td headers="Tuesday week11" role="gridcell" aria-selected="false">
+                  <span class="slds-day">2</span>
+                </td>
+                <td headers="Wednesday week11" role="gridcell" aria-selected="false">
+                  <span class="slds-day">3</span>
+                </td>
+                <td headers="Thursday week11" role="gridcell" aria-selected="false">
+                  <span class="slds-day">4</span>
+                </td>
+                <td headers="Friday week11" role="gridcell" aria-selected="false">
+                  <span class="slds-day">5</span>
+                </td>
+                <td headers="Saturday week11" role="gridcell" aria-selected="false">
+                  <span class="slds-day">6</span>
+                </td>
+              </tr>
+              <tr id="week12">
+                <td headers="Sunday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">7</span>
+                </td>
+                <td headers="Monday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">8</span>
+                </td>
+                <td headers="Tuesday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">9</span>
+                </td>
+                <td headers="Wednesday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">10</span>
+                </td>
+                <td headers="Thursday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">11</span>
+                </td>
+                <td headers="Friday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">12</span>
+                </td>
+                <td headers="Saturday week12" role="gridcell" aria-selected="false">
+                  <span class="slds-day">13</span>
+                </td>
+              </tr>
+              <tr id="week13">
+                <td headers="Sunday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">14</span>
+                </td>
+                <td headers="Monday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">15</span>
+                </td>
+                <td headers="Tuesday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">16</span>
+                </td>
+                <td headers="Wednesday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">17</span>
+                </td>
+                <td class="slds-is-today" headers="Thursday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">18</span>
+                </td>
+                <td headers="Friday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">19</span>
+                </td>
+                <td headers="Saturday week13" role="gridcell" aria-selected="false">
+                  <span class="slds-day">20</span>
+                </td>
+              </tr>
+              <tr id="week14">
+                <td headers="Sunday week14" role="gridcell" aria-selected="false">
+                  <span class="slds-day">21</span>
+                </td>
+                <td headers="Monday week14" role="gridcell" aria-selected="false">
+                  <span class="slds-day">22</span>
+                </td>
+                <td class="slds-is-selected" headers="Tuesday week14" role="gridcell" aria-selected="true">
+                  <span class="slds-day">23</span>
+                </td>
+                <td headers="Wednesday week14" role="gridcell" aria-selected="false">
+                  <span class="slds-day">24</span>
+                </td>
+                <td headers="Thursday week14" role="gridcell" aria-selected="false">
+                  <span class="slds-day">25</span>
+                </td>
+                <td headers="Friday week14" role="gridcell" aria-selected="false">
+                  <span class="slds-day">26</span>
+                </td>
+                <td headers="Saturday week14" role="gridcell" aria-selected="false">
+                  <span class="slds-day">27</span>
+                </td>
+              </tr>
+              <tr id="week15">
+                <td headers="Sunday week15" role="gridcell" aria-selected="false">
+                  <span class="slds-day">28</span>
+                </td>
+                <td headers="Monday week15" role="gridcell" aria-selected="false">
+                  <span class="slds-day">29</span>
+                </td>
+                <td headers="Tuesday week15" role="gridcell" aria-selected="false">
+                  <span class="slds-day">30</span>
+                </td>
+                <td class="slds-disabled-text" headers="Wednesday week15" role="gridcell" aria-disabled="true" aria-selected="false">
+                  <span class="slds-day">1</span>
+                </td>
+                <td class="slds-disabled-text" headers="Thursday week15" role="gridcell" aria-disabled="true" aria-selected="false">
+                  <span class="slds-day">2</span>
+                </td>
+                <td class="slds-disabled-text" headers="Friday week15" role="gridcell" aria-disabled="true" aria-selected="false">
+                  <span class="slds-day">3</span>
+                </td>
+                <td class="slds-disabled-text" headers="Saturday week15" role="gridcell" aria-disabled="true" aria-selected="false">
+                  <span class="slds-day">4</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="7" role="gridcell"><a href="javascript:void(0);" class="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- datapicker -->
+      </div>
+    </div>
+  </div>
+
+</aura:component>
